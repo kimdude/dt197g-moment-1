@@ -3,20 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DT197G - Moment 1</title>
+    <title>DT197G - Pure</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Startsida</a></li>
-            <li><a href="bootstrap.html">Bootstrap</a></li>
-            <li><a href="pure.html">Pure</a></li>
-        </ul>
-    </nav>
+    <!-- Huvudmeny -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="bootstrap.html">Bootstrap</a></li>
+                <li><a href="pure.html">Pure</a></li>
+                <li><a href="publishing.html">Pure</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <h1>Fullstacks-utveckling med ramverk</h1>
-        <h2>Moment 1 - CSS-ramverk</h2>
-        <p>Information om uppgiften, och vad den går ut på - tillsammans med information om vilka CSS-ramverk du använt för att lösa uppgiften.</p>
+        <h1>Pure</h1>
+        <p>En undersida med information om ramverket, med länk till ramverkets webbplats.
+        Sidan ska också innehålla en utvärdering av ramverket, ta med saker som för- och nackdelar och dina upplevelser av att arbeta med ramverket.
+        Det ska finnas en tabell ett formulär (läs mer info nedan).</p>
+        <h2>Tabell med Pure</h2>
+        <p>Tabellerna på undersidorna för ramverk 1 och 2 ska innehålla minst fyra fält och minst 5 rader med data, där fältnamn (titlar) ska vara tydligt utmärkta 
+        (använd thead i tabellen för detta).</p>
+        <!-- Tabell -->
+        <table>
+            <thead>
+                    <td>Ramverk</td>
+                    <td>Användning</td>
+                    <td>Prövad</td>
+                    <td>Blabla</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                </tr>
+                <tr>
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                </tr>
+                <tr>
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                </tr>
+                <tr>
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                </tr>
+                <tr>
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                    <td>Test</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Formulär-->
+        <h2>Formulär med Pure</h2>
+        <p>Formulären på undersidorna för ramverk 1 och 2 ska vara konstruerade på sånt sätt att de skulle kunna användas för att lagra data till ovanstående tabell.
+        Det som minimum ska finnas med i formuläret är input-fält, textarea, checkbox, och select-lista.
+        Det ska även finnas en submit-knapp.</p>
+        <form>
+            <label for="fwName">Ramverk: </label>
+            <input type="text" id="fwName" name="fwname"><br>
+            <label for="fwBenefit">Användning: </label>
+            <textarea id="fwBenefit" name="fwBenefit"></textarea><br>
+            <input type="checkbox" id="fwTested" name="fwTested">
+            <label for="fwTested">Testat</label><br>
+            <label for="fwSelect">Blabla</label>
+            <select id="fwSelect" name="fwSelect">
+                <option value="blabla">Blabla</option>
+            </select><br>
+            <input type="submit">
+        </form>
     </main>
+    <!-- Footer -->
+    <footer>
+        <p><strong>DT193G - Fullstacks-utveckling med ramverk</strong></p>
+        <p>Kim Dudenhöfer</p>
+        <p><time datetime="2025-11-17">2025-11-17</time></p>
+    </footer>
 </body>
 </html>

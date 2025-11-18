@@ -3,20 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DT197G - Moment 1</title>
+    <title>DT197G - Bootstrap</title>
+    <!-- Bootstrap stylesheet-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Startsida</a></li>
-            <li><a href="bootstrap.html">Bootstrap</a></li>
-            <li><a href="pure.html">Pure</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h1>Fullstacks-utveckling med ramverk</h1>
-        <h2>Moment 1 - CSS-ramverk</h2>
-        <p>Information om uppgiften, och vad den går ut på - tillsammans med information om vilka CSS-ramverk du använt för att lösa uppgiften.</p>
+    <!-- Huvudmeny -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="bootstrap.html">Bootstrap</a></li>
+                <li><a href="pure.html">Pure</a></li>
+                <li><a href="publishing.html">Pure</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Bootstrap kontainer -->
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h1>Bootstrap</h1>
+                <p>En undersida med information om ramverket, med länk till ramverkets webbplats.
+                Sidan ska också innehålla en utvärdering av ramverket, ta med saker som för- och nackdelar och dina upplevelser av att arbeta med ramverket.
+                Det ska finnas en tabell ett formulär (läs mer info nedan).</p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Kolumn för tabell -->
+            <div class="col">
+                <h2>Tabell med Bootstrap</h2>
+                <p>Tabellerna på undersidorna för ramverk 1 och 2 ska innehålla minst fyra fält och minst 5 rader med data, där fältnamn (titlar) ska vara tydligt utmärkta 
+                (använd thead i tabellen för detta).</p>
+                <table>
+                    <thead>
+                            <td>Ramverk</td>
+                            <td>Användning</td>
+                            <td>Prövad</td>
+                            <td>Blabla</td>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                        </tr>
+                        <tr>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                        </tr>
+                        <tr>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                        </tr>
+                        <tr>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                        </tr>
+                        <tr>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                            <td>Test</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Kolumn för formulär -->
+            <div class="col">
+                <h2>Formulär med Bootstrap</h2>
+                <p>Formulären på undersidorna för ramverk 1 och 2 ska vara konstruerade på sånt sätt att de skulle kunna användas för att lagra data till ovanstående tabell.
+                Det som minimum ska finnas med i formuläret är input-fält, textarea, checkbox, och select-lista.
+                Det ska även finnas en submit-knapp.</p>
+                <form>
+                    <label for="fwName">Ramverk: </label>
+                    <input type="text" id="fwName" name="fwname"><br>
+                    <label for="fwBenefit">Användning: </label>
+                    <textarea id="fwBenefit" name="fwBenefit"></textarea><br>
+                    <input type="checkbox" id="fwTested" name="fwTested">
+                    <label for="fwTested">Testat</label><br>
+                    <label for="fwSelect">Blabla</label>
+                    <select id="fwSelect" name="fwSelect">
+                        <option value="blabla">Blabla</option>
+                    </select><br>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
     </main>
+    <!-- Footer -->
+    <footer>
+        <p><strong>DT193G - Fullstacks-utveckling med ramverk</strong></p>
+        <p>Kim Dudenhöfer</p>
+        <p><time datetime="2025-11-17">2025-11-17</time></p>
+    </footer>
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
