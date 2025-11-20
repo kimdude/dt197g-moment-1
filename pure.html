@@ -5,86 +5,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DT197G - Pure</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
+    <style>
+        /* General styling */
+        main { padding: 20px 2rem; }
+        .pure-menu { padding: 10px 2rem; background-color: rgb(47, 196, 233); }
+        footer { padding: 20px 2rem; background-color: rgb(47, 196, 233); }
+        .table-container { overflow-y: scroll; scrollbar-width: thin; }
+
+        /*Nav-btn styling*/
+        span { display: block; margin: 4px; width: 20px; height: 2px; background-color: rgb(36, 36, 36); }
+        #checkMenu { display: none; }
+        .pure-menu-list { display: none; }
+        #checkMenu:checked ~ .pure-menu-list { display: flex; flex-direction: column; margin-top: 10px; }
+        #checkMenu:checked ~ #checkMenuLabel > #span1 { display: none; }
+        #checkMenu:checked ~ #checkMenuLabel > #span2 { position: absolute; transform: rotate(-43deg); }
+        #checkMenu:checked ~ #checkMenuLabel > #span3 { position: absolute; transform: rotate(43deg); }
+        
+        /*Screens over 640px*/
+        @media screen and (min-width: 640px) {
+            main, footer, .pure-menu { padding-left: 5rem; padding-right: 5rem;}
+            .pure-menu-list { display: flex; }
+            #checkMenuLabel { display: none; }
+            .table-container { scrollbar-width: none; }
+            
+        }
+    </style>
 </head>
 <body>
-    <!-- Huvudmeny -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="bootstrap.html">Bootstrap</a></li>
-                <li><a href="pure.html">Pure</a></li>
-                <li><a href="publishing.html">Pure</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Pure</h1>
-        <p>En undersida med information om ramverket, med länk till ramverkets webbplats.
-        Sidan ska också innehålla en utvärdering av ramverket, ta med saker som för- och nackdelar och dina upplevelser av att arbeta med ramverket.
-        Det ska finnas en tabell ett formulär (läs mer info nedan).</p>
-        <h2>Tabell med Pure</h2>
-        <p>Tabellerna på undersidorna för ramverk 1 och 2 ska innehålla minst fyra fält och minst 5 rader med data, där fältnamn (titlar) ska vara tydligt utmärkta 
-        (använd thead i tabellen för detta).</p>
-        <!-- Tabell -->
-        <table>
-            <thead>
-                    <td>Ramverk</td>
-                    <td>Användning</td>
-                    <td>Prövad</td>
-                    <td>Blabla</td>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Test</td>
-                    <td>Test</td>
-                    <td>Test</td>
-                    <td>Test</td>
-                </tr>
-                <tr>
-                    <td>Test</td>
-                    <td>Test</td>
-                    <td>Test</td>
-                    <td>Test</td>
-                </tr>
-                <tr>
-                    <td>Test</td>
-                    <td>Test</td>
-                    <td>Test</td>
-                    <td>Test</td>
-                </tr>
-                <tr>
-                    <td>Test</td>
-                    <td>Test</td>
-                    <td>Test</td>
-                    <td>Test</td>
-                </tr>
-                <tr>
-                    <td>Test</td>
-                    <td>Test</td>
-                    <td>Test</td>
-                    <td>Test</td>
-                </tr>
-            </tbody>
-        </table>
-        <!-- Formulär-->
-        <h2>Formulär med Pure</h2>
-        <p>Formulären på undersidorna för ramverk 1 och 2 ska vara konstruerade på sånt sätt att de skulle kunna användas för att lagra data till ovanstående tabell.
-        Det som minimum ska finnas med i formuläret är input-fält, textarea, checkbox, och select-lista.
-        Det ska även finnas en submit-knapp.</p>
-        <form>
-            <label for="fwName">Ramverk: </label>
-            <input type="text" id="fwName" name="fwname"><br>
-            <label for="fwBenefit">Användning: </label>
-            <textarea id="fwBenefit" name="fwBenefit"></textarea><br>
-            <input type="checkbox" id="fwTested" name="fwTested">
-            <label for="fwTested">Testat</label><br>
-            <label for="fwSelect">Blabla</label>
-            <select id="fwSelect" name="fwSelect">
-                <option value="blabla">Blabla</option>
-            </select><br>
-            <input type="submit">
-        </form>
+    <!-- Pure navigation -->
+    <nav class="pure-menu">
+        <input type="checkbox" id="checkMenu" name="checkMenu">
+        <label for="checkMenu" id="checkMenuLabel">
+            <span id="span1"></span>
+            <span id="span2"></span>
+            <span id="span3"></span>
+        </label>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Startsida</a></li>
+            <li class="pure-menu-item"><a href="bootstrap.html" class="pure-menu-link">Bootstrap</a></li>
+            <li class="pure-menu-item pure-menu-selected"><a href="pure.html" class="pure-menu-link">Pure</a></li>
+            <li class="pure-menu-item"><a href="publishing.html" class="pure-menu-link">Publicering</a></li>
+        </ul>
+    </nav>
+    <main class="pure-g">
+        <!-- Om Pure -->
+        <div class="pure-u-1">
+            <h1>Pure</h1>
+            <a href="https://pure-css.github.io/start/" target="_blank" title="Pure dokumentation">https://pure-css.github.io/start/</a>
+            <p>Pure är ett kostnadsfritt CSS-ramverk som erbjuder repsonsiva moduler. Modulerna är små i storleken och inkluderas genom att länka till stylesheeten i 
+                head-elementet. Pure CSS kan även inkluderas genom npm.
+            </p>
+            <p>Ramverket är lättanvänt med tydlig dokumentation. Det är litet i storleken och man kan snabbt skapa en responsiv layout. 
+                Men genom att det är litet i storleken finns inte mycket möjlighet att anpassa stylingen, såsom att ändra färger, formulär eller tabeller. Det finns inte heller något
+                inbyggd modul för att skapa en responsiv meny. Det innebär att man behöver skriva en del css själv och i slutändan har inte mycket tid sparats på styling.
+                Eftersom det finns möjlighet att hämta moduler individuellt kan det dock vara användbart om man vill använda Pure CSS för exempelvis endast knappar eller formulär.
+            </p>
+        </div>
+        <div class="pure-u-1 pure-u-lg-1-2 table-container">
+            <h2>Tabell med Pure</h2>
+            <!-- Tabell -->
+            <table class="pure-table pure-table-horizontal pure-table-striped">
+                <thead>
+                    <tr>
+                        <td>Ramverk</td>
+                        <td>Användning</td>
+                        <td>Blabla</td>
+                        <td>Testad</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                    </tr>
+                    <tr>
+                        <td>Test</td>
+
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                    </tr>
+                    <tr>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                    </tr>
+                    <tr>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                    </tr>
+                    <tr>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                        <td>Test</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pure-u-1 pure-u-lg-1-2">
+            <!-- Formulär-->
+            <h2>Formulär med Pure</h2>
+            <form class="pure-form pure-form-aligned">
+                <div class="pure-control-group">
+                    <label for="fwName">Ramverk </label>
+                    <input type="text" id="fwName" name="fwname"  placeholder="Ramverk" required>
+                </div>
+                <div class="pure-control-group">
+                    <label for="fwBenefit">Användning </label>
+                    <textarea id="fwBenefit" name="fwBenefit"  placeholder="Användningsområde" class="pure-input" required></textarea>
+                </div>
+                <div class="pure-control-group">
+                <label for="fwSelect">Blabla</label>
+                    <select id="fwSelect" name="fwSelect">
+                        <option value="blabla">Blabla</option>
+                    </select>
+                </div>
+                <div class="pure-controls">
+                    <label for="fwTested" class="pure-checkbox">
+                        <input type="checkbox" id="fwTested" name="fwTested">
+                        Jag har testat ramverket
+                    </label>
+                    <input type="submit" class="pure-button pure-button-primary pure-input-rounded" value="Skicka">
+                </div>
+            </form>
+        </div>
     </main>
     <!-- Footer -->
     <footer>
