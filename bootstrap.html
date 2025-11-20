@@ -37,8 +37,13 @@
         <div class="row">
             <div class="col-12">
                 <h1>Bootstrap</h1>
-                <p>Info om ramverket med länk.</p>
-                <p>Utvärdering, för- och nackdelar</p>
+                <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank" title="Bootstrap dokumentation">https://getbootstrap.com/docs/5.3/getting-started/introduction/</a><br><br>
+                <p>Bootstrap är ett kostnadsfritt ramverk för frontend-utveckling. Ramverket erbjuder responsiva komponenter för exempelvis knappar, tables, forms, 
+                    navigation och mer. Den erbjuder även JavaScript plugins. Allt kan inkluderas antingen genom att länka i head-elementet eller npm.</p>
+                <p>Bootstrap är väldigt lättanvänt och går snabbt att komma igång med. Den har många komponenter varav majoriteten går att anpassa någorlunda. 
+                    Man kan skapa en sida i utan att egentligen behöva skriva någon egen css-kod, om man inte vill. Däremot är komponenterna stora och behöver man endast
+                    CSS för exempelvis knappar finns ingen möjlighet att lägga till endast den komponenten. I så fall måste man använda SASS.
+                </p>
             </div>
         </div>
         <div class="row justify-content-between">
@@ -50,40 +55,40 @@
                         <tr>
                             <td>Ramverk</td>
                             <td>Användning</td>
-                            <td>Blabla</td>
                             <td>Testad</td>
+                            <td>Kostnadsfri</td>
                         </tr>
                     </thead>
                     <tbody class="table-group-divider">
                         <tr>
                             <td>Bootstrap</td>
-                            <td>Test</td>
+                            <td>Responsiva komponenter för ex. navigation layout, knappar, forms, tables.</td>
                             <td>Ja</td>
-                            <td>Test</td>
+                            <td>Ja</td>
                         </tr>
                         <tr>
                             <td>Pure</td>
-                            <td>Test</td>
+                            <td>Små, responsiva moduler för ex. layout, tables, forms.</td>
                             <td>Ja</td>
-                            <td>Test</td>
+                            <td>Ja</td>
                         </tr>
                         <tr>
                             <td>Tailwind</td>
-                            <td>Test</td>
+                            <td>Responsiva utility-klasser som fungerar likt inline-styling.</td>
                             <td>Nej</td>
-                            <td>Test</td>
+                            <td>Ja</td>
                         </tr>
                         <tr>
-                            <td>Test</td>
-                            <td>Test</td>
-                            <td>Test</td>
-                            <td>Test</td>
+                            <td>Tachyons</td>
+                            <td>Responsiva utility-klasser som fungerar likt inline-styling.</td>
+                            <td>Nej</td>
+                            <td>Ja</td>
                         </tr>
                         <tr>
-                            <td>Test</td>
-                            <td>Test</td>
-                            <td>Test</td>
-                            <td>Test</td>
+                            <td>Materialize CSS</td>
+                            <td>Responsiva, sammanhängande designer för olika webbprojekt oavsett plattform.</td>
+                            <td>Nej</td>
+                            <td>Ja</td>
                         </tr>
                     </tbody>
                 </table>
@@ -100,15 +105,15 @@
                         <textarea id="fwBenefit" name="fwBenefit" class="form-control" placeholder="användningsområde" required></textarea>
                         <label for="fwBenefit" class="form-label">Användningsområde</label>
                     </div>
+                    <label for="fwSelect" class="form-label">Testad</label>
+                    <select id="fwSelect" name="fwSelect" class="form-select mb-3">
+                        <option value="Testat">Har testat ramverket</option>
+                        <option value="Ej testat">Har ej testat ramverket</option>
+                    </select>
                     <div class="form-check form-switch mb-3">
                         <input type="checkbox" id="fwTested" name="fwTested" class="form-check-input">
-                        <label for="fwTested" class="form-ckeck-label">Jag har testat ramverket </label>
+                        <label for="fwTested" class="form-ckeck-label">Kostnadsfritt</label>
                     </div>
-                    <label for="fwSelect" class="form-label">Blabla </label>
-                    <select id="fwSelect" name="fwSelect" class="form-select mb-3">
-                        <option value="blabla">Blabla</option>
-                        <option value="blabla">Blabla</option>
-                    </select>
                     <button class="btn btn-primary">Skicka in</button>
                 </form>
             </div>
