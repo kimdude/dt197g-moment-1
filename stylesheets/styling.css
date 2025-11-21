@@ -58,7 +58,13 @@ body {
 }
 
 main { 
+    margin-left: auto;
     padding: 20px 2rem;
+}
+
+p {
+    max-width: 60ch;
+    line-height: 1.5rem;
 }
 
 footer {
